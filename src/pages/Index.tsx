@@ -18,6 +18,7 @@ import {
   Shield,
 } from "lucide-react";
 import heroBackground from "@/assets/hero-background.jpg";
+import jhansiPhoto from "@/assets/jhansi-photo.jpg";
 
 const Index = () => {
   const skills = [
@@ -121,32 +122,49 @@ const Index = () => {
             backgroundPosition: "center",
           }}
         />
-        <div className="relative z-10 container mx-auto px-4 py-20 text-center">
-          <h1 className="text-5xl md:text-7xl font-bold text-primary-foreground mb-6 animate-fade-in">
-            Building Scalable, Smart, and Beautiful Systems
-          </h1>
-          <p className="text-xl md:text-2xl text-primary-foreground/90 mb-8 animate-fade-in" style={{ animationDelay: "0.2s" }}>
-            Lead Fullstack Java Backend Developer | AI Generalist | Cloud Innovator
-          </p>
-          <div className="flex flex-wrap gap-4 justify-center animate-fade-in" style={{ animationDelay: "0.4s" }}>
-            <Button size="lg" className="bg-secondary hover:bg-secondary/90 text-secondary-foreground" asChild>
-              <a href="https://www.linkedin.com/in/jhansi-bendi-a0bb0a117/" target="_blank" rel="noopener noreferrer">
-                <Linkedin className="w-5 h-5 mr-2" />
-                View LinkedIn
-              </a>
-            </Button>
-            <Button size="lg" variant="outline" className="bg-white/10 hover:bg-white/20 text-primary-foreground border-white/30" asChild>
-              <a href="https://github.com/jhans866" target="_blank" rel="noopener noreferrer">
-                <Github className="w-5 h-5 mr-2" />
-                View GitHub
-              </a>
-            </Button>
-            <Button size="lg" variant="outline" className="bg-white/10 hover:bg-white/20 text-primary-foreground border-white/30" asChild>
-              <a href="mailto:jhans.1986@gmail.com">
-                <Mail className="w-5 h-5 mr-2" />
-                Contact Me
-              </a>
-            </Button>
+        <div className="relative z-10 container mx-auto px-4 py-20">
+          <div className="flex flex-col md:flex-row items-center justify-center gap-12 max-w-6xl mx-auto">
+            {/* Profile Photo */}
+            <div className="animate-fade-in">
+              <div className="relative">
+                <div className="absolute inset-0 bg-gradient-accent rounded-full blur-2xl opacity-30 animate-pulse" />
+                <img
+                  src={jhansiPhoto}
+                  alt="Jhansi Bendi - Lead Fullstack Java Backend Developer"
+                  className="relative w-64 h-64 md:w-80 md:h-80 rounded-full object-cover border-4 border-white/20 shadow-elegant hover-lift"
+                />
+              </div>
+            </div>
+
+            {/* Hero Content */}
+            <div className="text-center md:text-left flex-1">
+              <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-primary-foreground mb-6 animate-fade-in" style={{ animationDelay: "0.1s" }}>
+                Building Scalable, Smart, and Beautiful Systems
+              </h1>
+              <p className="text-lg md:text-xl lg:text-2xl text-primary-foreground/90 mb-8 animate-fade-in" style={{ animationDelay: "0.2s" }}>
+                Lead Fullstack Java Backend Developer | AI Generalist | Cloud Innovator
+              </p>
+              <div className="flex flex-wrap gap-4 justify-center md:justify-start animate-fade-in" style={{ animationDelay: "0.3s" }}>
+                <Button size="lg" className="bg-secondary hover:bg-secondary/90 text-secondary-foreground" asChild>
+                  <a href="https://www.linkedin.com/in/jhansi-bendi-a0bb0a117/" target="_blank" rel="noopener noreferrer">
+                    <Linkedin className="w-5 h-5 mr-2" />
+                    View LinkedIn
+                  </a>
+                </Button>
+                <Button size="lg" variant="outline" className="bg-white/10 hover:bg-white/20 text-primary-foreground border-white/30" asChild>
+                  <a href="https://github.com/jhans866" target="_blank" rel="noopener noreferrer">
+                    <Github className="w-5 h-5 mr-2" />
+                    View GitHub
+                  </a>
+                </Button>
+                <Button size="lg" variant="outline" className="bg-white/10 hover:bg-white/20 text-primary-foreground border-white/30" asChild>
+                  <a href="mailto:jhans.1986@gmail.com">
+                    <Mail className="w-5 h-5 mr-2" />
+                    Contact Me
+                  </a>
+                </Button>
+              </div>
+            </div>
           </div>
         </div>
       </section>
